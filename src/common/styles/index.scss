@@ -1,0 +1,24 @@
+@import './reset.scss';
+@import './mixin.scss';
+@import './variable.scss';
+
+/* prettier-ignore */
+#root {
+  min-height: 100vh;
+  font-size: 12PX;
+  max-width: 540PX;
+  min-width: 320PX;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'DIN Alternate Bold';
+  src: url(../../common/fonts/DINAlternateBold.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'DIN Pro Bold';
+  src: url(../../common/fonts/DINPro-Bold.otf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

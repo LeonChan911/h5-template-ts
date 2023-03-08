@@ -1,0 +1,202 @@
+{
+  "name": "--app-name",
+  "version": "1.0.0",
+  "description": "--app-name",
+  "private": false,
+  "scripts": {
+    "dev": "yarn start",
+    "start": "REACT_APP_ENV=dev node scripts/start.js",
+    "build": "node scripts/build.js",
+    "build-test": "REACT_APP_ENV=test yarn build",
+    "build-uat": "REACT_APP_ENV=uat yarn build",
+    "build-prod": "REACT_APP_ENV=prod yarn build",
+    "build-analyze": "REACT_APP_ANALYZE=true yarn build-prod",
+    "test": "node scripts/test.js",
+    "commit": "git-cz"
+  },
+  "lint-staged": {
+    "src/**/*.ts?(x)": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "browserslist": {
+    "production": [
+      "last 2 versions",
+      "Android >= 4.4",
+      "iOS >= 9"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@xmly/arouse": "^0.1.25",
+    "@xmly/fast-image": "^1.2.10",
+    "@xmly/popup-checkstand": "^0.33.7",
+    "@xmly/sniffing-sdk": "^3.0.5",
+    "@xmly/xmly-ua-parser": "^1.0.2",
+    "@xmly/xmrep": "2.4.14",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "cookie": "^0.4.1",
+    "core-js": "^3.3.2",
+    "in-view": "^0.6.1",
+    "light-toast": "^0.3.2",
+    "lodash": "^4.17.21",
+    "qs": "^6.10.1",
+    "query-string": "^7.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.15",
+    "react-lazyload": "^3.2.0",
+    "react-router-dom": "^5.0.1",
+    "react-use": "^17.2.1",
+    "regenerator-runtime": "^0.13.3",
+    "styled-components": "^5.3.5",
+    "vconsole": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/helper-call-delegate": "^7.12.13",
+    "@babel/helper-define-map": "^7.13.12",
+    "@babel/helper-regex": "^7.10.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@svgr/webpack": "4.1.0",
+    "@types/classnames": "^2.2.9",
+    "@types/jest": "24.0.13",
+    "@types/lodash": "^4.14.168",
+    "@types/node": "12.0.7",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-lazyload": "^3.1.0",
+    "@types/react-router-dom": "^5.0.1",
+    "@types/react-slick": "^0.23.4",
+    "@umijs/fabric": "^1.2.1",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "8.0.5",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-named-asset-import": "^0.3.2",
+    "babel-preset-react-app": "^9.1.0",
+    "camelcase": "^5.2.0",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "chokidar": "^3.0.2",
+    "clear-module": "^4.0.0",
+    "colors-cli": "^1.0.23",
+    "commitizen": "^3.1.1",
+    "css-loader": "2.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "dotenv": "6.2.0",
+    "dotenv-expand": "4.2.0",
+    "eslint-loader": "2.1.2",
+    "file-loader": "3.0.1",
+    "fs-extra": "7.0.1",
+    "hash-sum": "^2.0.0",
+    "html-webpack-plugin": "4.0.0-beta.5",
+    "http-proxy-middleware": "^0.20.0",
+    "husky": "^2.3.0",
+    "identity-obj-proxy": "3.0.0",
+    "is-wsl": "^1.1.0",
+    "jest": "24.7.1",
+    "jest-environment-jsdom-fourteen": "0.1.0",
+    "jest-resolve": "24.7.1",
+    "jest-watch-typeahead": "0.3.0",
+    "lint-staged": "^8.1.7",
+    "mini-css-extract-plugin": "0.5.0",
+    "mocker-api": "^1.7.6",
+    "mockjs": "^1.0.1-beta3",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "path-to-regexp": "^3.0.0",
+    "pnp-webpack-plugin": "1.2.1",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-normalize": "7.0.1",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "postcss-preset-env": "6.6.0",
+    "postcss-safe-parser": "4.0.1",
+    "prettier": "^1.18.2",
+    "react-dev-utils": "^9.0.1",
+    "resolve": "1.10.0",
+    "rimraf": "^3.0.0",
+    "sass-loader": "7.1.0",
+    "semver": "6.0.0",
+    "style-loader": "0.23.1",
+    "terser-webpack-plugin": "1.2.3",
+    "ts-pnp": "1.1.2",
+    "typescript": "^4.2.3",
+    "url-loader": "1.1.2",
+    "utility-types": "^3.7.0",
+    "webpack": "4.29.6",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-dev-server": "3.2.1",
+    "webpack-manifest-plugin": "2.0.4",
+    "webpackbar": "^4.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "setupFilesAfterEnv": [],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jest-environment-jsdom-fourteen",
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "modulePaths": [],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
+  },
+  "yxpm": {
+    "output": "dist"
+  }
+}

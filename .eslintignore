@@ -1,0 +1,11 @@
+public/
+node_modules/
+build/
+dist/
+config/
+public/
+scripts/
+mock/
+iris.config.js
+src/typings
+src/schemas
